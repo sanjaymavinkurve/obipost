@@ -13,7 +13,8 @@ class User < ActiveRecord::Base
 
   validates :password,  :presence => true,
                         :confirmation => true,
-                        :length => { :within => 6..40 }
+                        :length => { :within => 6..40 },
+                        :unless => :password_created?
 
   before_save :encrypt_password
   
@@ -38,8 +39,10 @@ class User < ActiveRecord::Base
   private
   
     def encrypt_password
-      self.salt = make_salt if new_record?
-      self.encrypted_password = encrypt(self.password)
+      if new_record?
+        self.salt = make_salt
+        self.encrypted_password = encrypt(self.password)
+      end
     end
     
     def encrypt(string)
@@ -53,5 +56,9 @@ class User < ActiveRecord::Base
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
     end
-
+    
+    def password_created?
+      !self.encrypted_password.nil? && !self.encrypted_password.empty?
+    end
+    
 end
