@@ -4,6 +4,7 @@
 
 <% if signed_in? %>
   You are signed is as <%= current_user.name %>
+	Admin? <%= current_user.admin? %>
 <% else %>
   You are not signed in.
 <% end %>
