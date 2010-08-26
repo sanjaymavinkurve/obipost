@@ -10,7 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100822215242) do
+ActiveRecord::Schema.define(:version => 20100826032829) do
+
+  create_table "real_estate_posts", :force => true do |t|
+    t.string   "name"
+    t.integer  "phone_number"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.integer  "bedrooms"
+    t.integer  "full_bathrooms"
+    t.integer  "half_bathrooms"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "real_estate_posts", ["user_id"], :name => "index_real_estate_posts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
