@@ -1,6 +1,6 @@
-class CreateRealEstatePosts < ActiveRecord::Migration
+class CreatePosts < ActiveRecord::Migration
   def self.up
-    create_table :real_estate_posts do |t|
+    create_table :posts do |t|
       t.string :name
       t.integer :phone_number
       t.string :street
@@ -16,6 +16,6 @@ class CreateRealEstatePosts < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :real_estate_posts
+    drop_table :posts
   end
 end

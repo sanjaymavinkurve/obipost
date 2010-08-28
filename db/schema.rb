@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(:version => 20100826032829) do
 
-  create_table "real_estate_posts", :force => true do |t|
+  create_table "posts", :force => true do |t|
     t.string   "name"
     t.integer  "phone_number"
     t.string   "street"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20100826032829) do
     t.integer  "user_id"
   end
 
-  add_index "real_estate_posts", ["user_id"], :name => "index_real_estate_posts_on_user_id"
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
