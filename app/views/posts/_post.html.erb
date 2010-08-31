@@ -1,0 +1,12 @@
+<tr>
+  <td>
+		<%= post.id %> -
+		<%= post.user_id %> -
+    <%= post.name %> -
+		<%= post.created_at %> -
+		<%= post.street %>
+		<%= link_to "Edit", edit_post_path(post.id) %>
+		<%= link_to "delete", post, :method => :delete,
+																:title => "Delete" %>
+	</td>
+</tr>

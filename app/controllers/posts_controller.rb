@@ -2,8 +2,10 @@ class PostsController < ApplicationController
 	before_filter :authenticate, :only => [:create, :destroy, :new]
 	
 	def create
-		@post = current_user.posts.build
-													(params[:post])
+		@post = current_user.posts.new(params[:post])
+		p params[:post]
+		p @post
+		p current_user
 		if @post.save
 			redirect_to current_user
 		else
@@ -21,6 +23,11 @@ class PostsController < ApplicationController
 	end	
 	
 	def destroy
+		p params[:id]
+		p user_path
+		Post.find(params[:id]).destroy
+		flash[:success] = "Post deleted."
+		redirect_to current_user
 	end
 	
 	def new
