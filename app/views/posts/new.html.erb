@@ -1,20 +1,10 @@
-<h1>Create a listing</h1>
-
 <%= form_for(@post) do |f| %>
 	<%= render 'shared/error_messages', :object => f.object %>
-	<div class="field">
-		<%= f.label :name %><br />
-		<%= f.text_field :name, :value => current_user.name %>
-	</div>
-	<div class="field">
-		<%= f.label :street %><br />
-		<%= f.text_field :street %>
-	</div>
-	<div class="field">
-		<%= f.label :bedrooms %><br />
-		<%= f.text_field :bedrooms %>
-	</div>
+
+	<%= render "step_#{@post.current_step}", :f => f %>
+
 	<div class="actions">
-		<%= f.submit "Sign up" %>
+		<%= f.submit "Next" %>
 	</div>
+
 <% end %>

@@ -3,9 +3,16 @@
 		<%= post.id %> -
 		<%= post.user_id %> -
     <%= post.name %> -
-		<%= post.created_at %> -
-		<%= post.street %>
-		<%= link_to "Edit", edit_post_path(post.id) %>
+		<%= post.street %> -
+		<%= post.city %> -
+		<%= post.state %> -
+		<%= post.zip %> -
+		<%= post.bedrooms %> -
+		<%= post.full_bathrooms %> -
+		<%= post.half_bathrooms %> -
+		<%= link_to "Step 1", edit_post_path(post.id, :current_step => "1") %>
+		<%= link_to "Step 2", edit_post_path(post.id, :current_step => "2") %>
+		<%= link_to "Step 3", edit_post_path(post.id, :current_step => "3") %>
 		<%= link_to "delete", post, :method => :delete,
 																:title => "Delete" %>
 	</td>

@@ -1,0 +1,10 @@
+<%= f.hidden_field :step, :value => '1' %>
+
+<div class="field">
+	<%= f.label :name %><br />
+	<%= f.text_field :name, :value => current_user.name %>
+</div>
+<div class="field">
+	<%= f.label :phone_number %><br />
+	<%= f.text_field :phone_number %>
+</div>

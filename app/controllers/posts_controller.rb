@@ -2,25 +2,28 @@ class PostsController < ApplicationController
 	before_filter :authenticate, :only => [:create, :destroy, :new]
 	
 	def create
-		@post = current_user.posts.new(params[:post])
-		p params[:post]
-		p @post
-		p current_user
-		if @post.save
-			redirect_to current_user
-		else
-			render 'new'
-		end
+		submitted_step = params[:post][:step]
+		params[:post].delete("step")
+		@post = current_user.posts.new(params[:post])		
+		@post.save
+		@post.current_step = submitted_step.to_i + 1
+		render 'new'
 	end
 
 	def update
-		@post = Post.find(params[:id])
-		if @post.update_attributes(params[:post])
+		p params
+		submitted_step = params[:post][:step]
+		params[:post].delete("step")
+		@post = Post.find(params[:id])		
+		@post.update_attributes(params[:post])
+		
+		if submitted_step == "3"
 			redirect_to current_user
 		else
-			render 'edit'
+			@post.current_step = submitted_step.to_i + 1
+			render 'new'
 		end
-	end	
+	end
 	
 	def destroy
 		p params[:id]
@@ -38,6 +41,8 @@ class PostsController < ApplicationController
 	def edit
 		@title = "Edit post"
 		@post = Post.find(params[:id])
+		@post.current_step = params[:current_step]
+		render 'new'
 	end
 	
 end
