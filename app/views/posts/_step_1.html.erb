@@ -1,21 +1,18 @@
 <%= f.hidden_field :step, :value => '1' %>
 
 <div class="field">
-	<%= f.label :name %><br />
-	<%= f.text_field :name, :value => current_user.name %>
+	<%= f.label :street %><br />
+	<%= f.text_field :street %>
 </div>
 <div class="field">
-	<%= f.label :phone_number %><br />
-	<%= f.text_field :phone_number %>
+	<%= f.label :city %><br />
+	<%= f.text_field :city %>
 </div>
-<div>
-	<% f.fields_for :photoframes do |photoframe| %>
-		<%= photoframe.file_field :photo %>
-	<% end %>
+<div class="field">
+	<%= f.label :state %><br />
+	<%= f.text_field :state %>
 </div>
-
-<div>
-	<% f.fields_for :photoframes do |photoframe| %>
-		<%= image_tag(photoframe.object.photo.url(:original)) %>
-	<% end %>
+<div class="field">
+	<%= f.label :zip %><br />
+	<%= f.text_field :zip %>
 </div>

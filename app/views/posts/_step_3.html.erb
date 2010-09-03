@@ -1,14 +1,14 @@
 <%= f.hidden_field :step, :value => '3' %>
 
-<div class="field">
-	<%= f.label :bedrooms %><br />
-	<%= f.text_field :bedrooms %>
+<div>
+	<%= f.fields_for :photoframes do |photoframe| %>
+		<%= photoframe.file_field :photo %>
+	<% end %>
 </div>
-<div class="field">
-	<%= f.label :full_bathrooms %><br />
-	<%= f.text_field :full_bathrooms %>
-</div>
-<div class="field">
-	<%= f.label :half_bathrooms %><br />
-	<%= f.text_field :half_bathrooms %>
+
+<div>
+	<%= f.fields_for :photoframes do |photoframe| %>
+		<%= image_tag(photoframe.object.photo.url(:original)) %>
+		HELLO
+	<% end %>
 </div>

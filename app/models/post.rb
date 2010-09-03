@@ -8,8 +8,12 @@ class Post < ActiveRecord::Base
 	accepts_nested_attributes_for :photoframes
 
 	def steps
-		%w[1 2 3]
+		%w[0 1 2 3]
 	end
+	
+	def step_names
+	  ["Contact information", "Property address", "Property features", "Photos"]
+  end
 	
 	def current_step
     @current_step || steps.first

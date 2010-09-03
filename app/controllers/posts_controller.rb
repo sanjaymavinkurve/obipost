@@ -4,9 +4,11 @@ class PostsController < ApplicationController
 	def create
 		submitted_step = params[:post][:step]
 		params[:post].delete("step")
-		@post = current_user.posts.new(params[:post])		
+		@post = current_user.posts.new(params[:post])
+		3.times {@post.photoframes.build}
 		@post.save
 		@post.current_step = submitted_step.to_i + 1
+		@title = @post.step_names[@post.current_step.to_i]
 		render 'new'
 	end
 
@@ -20,30 +22,38 @@ class PostsController < ApplicationController
 			redirect_to current_user
 		else
 			@post.current_step = submitted_step.to_i + 1
+			@title = @post.step_names[@post.current_step.to_i]
 			render 'new'
 		end
-	end
-	
-	def destroy
-		p params[:id]
-		p user_path
-		Post.find(params[:id]).destroy
-		flash[:success] = "Post deleted."
-		redirect_to current_user
-	end
-	
-	def new
-		@title = "Sign up"
-		@post = Post.new
-		3.times {@post.photoframes.build}
 	end
 	
 	def edit
 		@title = "Edit post"
 		@post = Post.find(params[:id])
 		@post.current_step = params[:current_step]
-		3.times {@post.photoframes.build}
+		@title = @post.step_names[@post.current_step.to_i]
 		render 'new'
+	end
+	
+	
+	def destroy
+	  # HACK
+	  # What is the right way to check that a record exists before attempting to
+	  # delete it?  Double-deletion occurs when the user presses the "Delete"
+	  # link twice in rapid succession.
+	  
+		if Post.find_by_id(params[:id]).nil?
+		  redirect_to current_user
+	  else
+		  Post.find(params[:id]).destroy
+		  flash[:success] = "Post deleted."
+		  redirect_to current_user
+	  end
+	end
+	
+	def new
+		@post = Post.new
+		@title = @post.step_names[@post.current_step.to_i]
 	end
 	
 end

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 	
 	def show
 		@user = User.find(params[:id])
-		@title = @user.name
+		@title = "My Posts"
 	end
 	
 	def create
