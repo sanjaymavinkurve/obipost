@@ -4,6 +4,9 @@ class Post < ActiveRecord::Base
 	
 	belongs_to :user
 	
+	has_many :photoframes
+	accepts_nested_attributes_for :photoframes
+
 	def steps
 		%w[1 2 3]
 	end

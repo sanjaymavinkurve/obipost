@@ -11,13 +11,12 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		p params
 		submitted_step = params[:post][:step]
 		params[:post].delete("step")
 		@post = Post.find(params[:id])		
 		@post.update_attributes(params[:post])
-		
-		if submitted_step == "3"
+		p @post.current_step
+		if submitted_step == @post.steps.last
 			redirect_to current_user
 		else
 			@post.current_step = submitted_step.to_i + 1
@@ -36,12 +35,14 @@ class PostsController < ApplicationController
 	def new
 		@title = "Sign up"
 		@post = Post.new
+		3.times {@post.photoframes.build}
 	end
 	
 	def edit
 		@title = "Edit post"
 		@post = Post.find(params[:id])
 		@post.current_step = params[:current_step]
+		3.times {@post.photoframes.build}
 		render 'new'
 	end
 	

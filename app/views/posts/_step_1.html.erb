@@ -8,3 +8,14 @@
 	<%= f.label :phone_number %><br />
 	<%= f.text_field :phone_number %>
 </div>
+<div>
+	<% f.fields_for :photoframes do |photoframe| %>
+		<%= photoframe.file_field :photo %>
+	<% end %>
+</div>
+
+<div>
+	<% f.fields_for :photoframes do |photoframe| %>
+		<%= image_tag(photoframe.object.photo.url(:original)) %>
+	<% end %>
+</div>

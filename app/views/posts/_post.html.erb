@@ -2,7 +2,7 @@
   <td>
 		<%= post.id %> -
 		<%= post.user_id %> -
-    <%= post.name %> -
+    	<%= post.name %> -
 		<%= post.street %> -
 		<%= post.city %> -
 		<%= post.state %> -
@@ -13,7 +13,6 @@
 		<%= link_to "Step 1", edit_post_path(post.id, :current_step => "1") %>
 		<%= link_to "Step 2", edit_post_path(post.id, :current_step => "2") %>
 		<%= link_to "Step 3", edit_post_path(post.id, :current_step => "3") %>
-		<%= link_to "delete", post, :method => :delete,
-																:title => "Delete" %>
+		<%= link_to "delete", post, :method => :delete, :title => "Delete" %>
 	</td>
 </tr>
