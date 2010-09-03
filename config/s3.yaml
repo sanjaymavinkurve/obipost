@@ -1,0 +1,14 @@
+development:
+  bucket: obipostdevelopment
+  access_key_id: AKIAJM7RPNWLGDXBURUA
+  secret_access_key: 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
+
+test:
+  bucket: obiposttest
+  access_key_id: AKIAJM7RPNWLGDXBURUA
+  secret_access_key: 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
+
+production:
+  bucket: obipost
+  access_key_id: AKIAJM7RPNWLGDXBURUA
+  secret_access_key: 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
