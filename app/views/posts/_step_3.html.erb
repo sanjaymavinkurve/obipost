@@ -9,6 +9,5 @@
 <div>
 	<%= f.fields_for :photoframes do |photoframe| %>
 		<%= image_tag(photoframe.object.photo.url(:original)) %>
-		HELLO
 	<% end %>
 </div>
