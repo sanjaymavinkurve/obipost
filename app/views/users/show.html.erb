@@ -1,5 +1,7 @@
 <%= link_to "Create a new post", new_post_path %>
 
-<table>
-	<%= render @user.posts %>
-</table>
+<div id="posts_list">
+	<table>
+		<%= render @user.posts %>
+	</table>
+</div>

@@ -14,6 +14,6 @@
 		<%= link_to post.step_names[1], edit_post_path(post.id, :current_step => "1") %>
 		<%= link_to post.step_names[2], edit_post_path(post.id, :current_step => "2") %>
 		<%= link_to post.step_names[3], edit_post_path(post.id, :current_step => "3") %>
-		<%= link_to "Delete", post, :method => :delete %>
+		<%= link_to "Delete", post, :method => :delete, :remote => true %>
 	</td>
 </tr>
