@@ -1,0 +1,7 @@
+<% @post.step_names.each_with_index do |step, i| %>
+	<% if @post.current_step.to_i == i %>
+		<b><%= "#{step}" %></b>
+	<% else %>
+		<%= "#{step}" %>
+	<% end %>
+<% end %>
