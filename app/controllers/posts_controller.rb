@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 		@post.save
 		@post.current_step = submitted_step.to_i + 1
 		@title = @post.step_names[@post.current_step.to_i]
-		if params[:commit] == "Save"
+		if params[:commit] == "Save" || params[:commit] == "I'll finish later"
 	    redirect_to current_user
 	  elsif params[:commit] == "Next"
 		  render 'new'
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 		else
 			@post.current_step = submitted_step.to_i + 1
 			@title = @post.step_names[@post.current_step.to_i]
-			if params[:commit] == "Save"
+			if params[:commit] == "Save" || params[:commit] == "I'll finish later"
   	    redirect_to current_user
   	  elsif params[:commit] == "Next"
   	    @post.update_attributes(:completed => submitted_step.to_i + 1)
