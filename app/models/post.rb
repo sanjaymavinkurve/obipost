@@ -1,7 +1,5 @@
 class Post < ActiveRecord::Base
-	attr_protected
-	attr_writer :current_step
-	attr_accessor :existing_post
+	attr_accessor :existing_post, :current_step
 	
 	belongs_to :user
 	
