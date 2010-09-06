@@ -2,8 +2,11 @@
 
 <div class="field">
 	<%= f.label :name %><br />
-	<%= f.text_field :name, :value => current_user.name %>
-</div>
+	<% if @post.new_record? %>
+		<%= f.text_field :name, :value => current_user.name %>
+	<% else %>
+		<%= f.text_field :name %>
+	<% end %></div>
 <div class="field">
 	<%= f.label :phone_number %><br />
 	<%= f.text_field :phone_number %>

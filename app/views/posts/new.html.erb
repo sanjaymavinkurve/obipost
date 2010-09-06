@@ -1,7 +1,13 @@
+<%= render "steps_progress", :post => @post%>
+
 <%= form_for @post, :html => {:multipart => true} do |f| %>
-	<%= render 'shared/error_messages', :object => f.object %>
-	<%= render "step_#{@post.current_step}", :f => f %>
-	<div class="actions">
+	<%= render "shared/error_messages", :object => f.object %>
+	<%= render "step_#{@post.current_step}", :f => f, :post => @post %>
+
+	<% if @post.existing_post %>
+		<%= f.submit "Save" %>
+	<% else %>
 		<%= f.submit "Next" %>
-	</div>
+	<% end %>
+
 <% end %>
