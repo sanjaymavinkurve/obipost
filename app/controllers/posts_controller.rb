@@ -7,9 +7,6 @@ class PostsController < ApplicationController
 		@post = current_user.posts.new(params[:post])
 		3.times {@post.photoframes.build}
 		@post.completed = submitted_step.to_i + 1
-		p "================="
-		p @post.completed
-		p "================="
 		@post.save
 		@post.current_step = submitted_step.to_i + 1
 		@title = @post.step_names[@post.current_step.to_i]
