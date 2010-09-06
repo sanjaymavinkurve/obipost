@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 		params[:post].delete("step")
 		@post = current_user.posts.new(params[:post])
 		3.times {@post.photoframes.build}
-		@post.completed = false
+		@post.completed = submitted_step.to_i + 1
 		@post.save
 		@post.current_step = submitted_step.to_i + 1
 		@title = @post.step_names[@post.current_step.to_i]
@@ -22,12 +22,12 @@ class PostsController < ApplicationController
 		params[:post].delete("step")
 		@post = Post.find(params[:id])		
 		@post.update_attributes(params[:post])
-		p @post.current_step
 		if submitted_step == @post.steps.last
-		  @post.update_attributes(:completed => true)
+		  @post.update_attributes(:completed => -1)
 			redirect_to current_user
 		else
 			@post.current_step = submitted_step.to_i + 1
+			@post.update_attributes(:completed => submitted_step.to_i + 1)
 			@title = @post.step_names[@post.current_step.to_i]
 			if params[:commit] == "Save"
   	    redirect_to current_user

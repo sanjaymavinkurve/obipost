@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20100906044415) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.boolean  "completed"
+    t.integer  "completed"
     t.boolean  "disabled"
   end
 

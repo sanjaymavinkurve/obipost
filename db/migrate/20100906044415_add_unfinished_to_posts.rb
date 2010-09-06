@@ -1,6 +1,6 @@
 class AddUnfinishedToPosts < ActiveRecord::Migration
   def self.up
-    add_column :posts, :completed, :boolean
+    add_column :posts, :completed, :integer
     add_column :posts, :disabled, :boolean
   end
 

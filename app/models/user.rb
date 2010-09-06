@@ -17,6 +17,28 @@ class User < ActiveRecord::Base
 												:if => :should_validate_password?
 
 	before_save :encrypt_password
+	
+	
+	def completed_posts
+	  completed_posts = Array.new
+    posts.each do |post|
+	    if post.completed < 0
+	      completed_posts << post
+      end
+    end
+    completed_posts
+  end
+
+	def incomplete_posts
+	  incomplete_posts = Array.new
+    posts.each do |post|
+	    if post.completed >= 0
+	      incomplete_posts << post
+      end
+    end
+    incomplete_posts
+  end
+	
 
 	def has_password?(submitted_password)
 		self.encrypted_password == encrypt(submitted_password)
@@ -33,8 +55,6 @@ class User < ActiveRecord::Base
 		return nil if user.nil?
 		return user if user.salt == cookie_salt
 	end
-
-
 
 	private
 

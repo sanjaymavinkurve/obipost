@@ -1,6 +1,7 @@
+<% if post.completed < 0 %>
 <tr>
   <td>
-		<%= post.completed %> -
+		<b><%= post.completed %></b> -
 		<%= post.id %> -
 		<%= post.user_id %> -
     	<%= post.name %> -
@@ -19,3 +20,23 @@
 		<%= link_to "Delete", post, :method => :delete, :remote => true %>
 	</td>
 </tr>
+<% else %>
+<tr>
+	<td>
+		<b><%= post.completed %></b> -
+		<%= post.id %> -
+		<%= post.user_id %> -
+    	<%= post.name %> -
+		<%= post.phone_number %> -
+		<%= post.street %> -
+		<%= post.city %> -
+		<%= post.state %> -
+		<%= post.zip %> -
+		<%= post.bedrooms %> -
+		<%= post.full_bathrooms %> -
+		<%= post.half_bathrooms %> -
+		<%= link_to "Complete", edit_post_path(post.id, :current_step => post.completed) %>
+		<%= link_to "Delete", post, :method => :delete, :remote => true %>
+	</td>
+</tr>
+<% end %>

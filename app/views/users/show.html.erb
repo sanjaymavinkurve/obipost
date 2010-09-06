@@ -1,7 +1,19 @@
 <%= link_to "Create a new post", new_post_path %>
 
-<div id="posts_list">
+<div id="completed_posts">
 	<table>
-		<%= render @user.posts %>
+		<%= render @user.completed_posts %>
 	</table>
 </div>
+
+
+<% if @user.incomplete_posts.count > 0 %>
+
+<h1>Incomplete posts</h1>
+<div id="incomplete_posts">
+	<table>
+		<%= render @user.incomplete_posts %>
+	</table>
+</div>
+
+<% end %>

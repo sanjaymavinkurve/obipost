@@ -1,1 +1,5 @@
-$("#posts_list").html("<table><%= escape_javascript(render current_user.posts) %></table>");
+// HACK
+// We should call html() only on the div that was modified
+
+$("#completed_posts").html("<table><%= escape_javascript(render current_user.completed_posts) %></table>");
+$("#incomplete_posts").html("<table><%= escape_javascript(render current_user.incomplete_posts) %></table>");

@@ -1,17 +1,18 @@
 <header>
 	<nav class="round">
+	  <%= link_to "Home", root_path %> | 
+	  <%= link_to "FAQ", faq_path %> | 
+	  <%= link_to "About", about_path %> | 
+	  <%= link_to "Contact us", contact_path %>
+	  &nbsp;-&nbsp;
 	  <% if signed_in? %>
+		<b><%= link_to "My Posts", current_user %></b> | 
+		<%= link_to "Settings", edit_user_path(current_user) %> |
 		<%= link_to "Signout", signout_path, :method => :delete %>
-		<%= link_to "My Posts", current_user %>
-		<%= link_to "Settings", edit_user_path(current_user) %>
 	  <% else %>
-		<%= link_to "Sign in", signin_path %>
+		<%= link_to "Sign in", signin_path %> |
 		<%= link_to "Sign up", signup_path %>
 	  <% end %>
-		-
-	  <%= link_to "Home", root_path %>
-	  <%= link_to "FAQ", faq_path %>
-	  <%= link_to "About", about_path %>
-	  <%= link_to "Contact us", contact_path %>
+
 	</nav>
 </header>
