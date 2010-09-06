@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906044415) do
+ActiveRecord::Schema.define(:version => 20100906193821) do
 
   create_table "photoframes", :force => true do |t|
     t.string   "caption"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20100906044415) do
     t.string   "encrypted_password"
     t.string   "salt"
     t.boolean  "admin"
+    t.integer  "balance"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

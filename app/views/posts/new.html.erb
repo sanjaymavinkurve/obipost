@@ -4,7 +4,7 @@
 	<%= render "shared/error_messages", :object => f.object %>
 	<%= render "step_#{@post.current_step}", :f => f, :post => @post %>
 
-	<% if @post.existing_post && @post.completed < 0 %>
+	<% if @post.completed < 0 %>
 		<%= f.submit "Save" %>
 	<% else %>
 		<%= f.submit "Next" %>

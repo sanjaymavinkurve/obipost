@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	attr_accessor :existing_post, :current_step
+	attr_accessor :current_step
 	
 	belongs_to :user
 	
@@ -17,5 +17,5 @@ class Post < ActiveRecord::Base
 	def current_step
     @current_step || steps.first
   end
-	
+  	
 end
