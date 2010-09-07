@@ -70,6 +70,10 @@ class PostsController < ApplicationController
 	def show
 	  @post = Post.find(params[:id])
 	  @title = @post.street
+	  respond_to do |format|
+      format.html { render :action => 'show', :layout => 'post.html.erb' }
+    end
+    
   end
 	
 end
