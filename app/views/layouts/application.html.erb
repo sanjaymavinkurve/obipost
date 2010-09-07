@@ -13,13 +13,21 @@
 		<div id="header">
 			<%= image_tag("obipost.png") %>
 			<div id="status">
+				<div id="static-links">
+				<%= link_to "Home", root_path %>&nbsp;&nbsp;
+				<%= link_to "FAQ", faq_path %>&nbsp;&nbsp;
+				<%= link_to "About", about_path %>&nbsp;&nbsp;
+				<%= link_to "Contact us", contact_path %>
+				</div>
+				<div id="login-links">
 				<% if signed_in? %>
 					<%= current_user.email %> - 
 					<%= link_to "Signout", signout_path, :method => :delete %>
 				<% else %>
-					<%= link_to "Sign up", signup_path %> | 
-					<%= link_to "Sign in", signin_path %>
+					<%= link_to "Sign in", signin_path %>&nbsp;&nbsp;
+					<b><%= link_to "Sign up", signup_path %></b>
 				<% end %>
+				</div>
 			</div>
 		</div>
 		
@@ -29,10 +37,6 @@
 					<li><%= link_to "My Posts", current_user %>
 					<li><%= link_to "My Account", edit_user_path(current_user) %>
 				<% end %>
-				<li><%= link_to "Home", root_path %>
-				<li><%= link_to "FAQ", faq_path %>
-				<li><%= link_to "About", about_path %>
-				<li><%= link_to "Contact us", contact_path %>
 			</ul>
 			<br class="clear" />
 		</div>

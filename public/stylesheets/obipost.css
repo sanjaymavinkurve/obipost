@@ -1,16 +1,15 @@
 /*
 	global
 */
-* {
-	padding:0;
-	margin:0;
-}
 body {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:0.9em;
 	margin:0 auto;
 	padding:0;
 	height:100%;
+}
+h1 {
+	margin-top:0px;
 }
 
 /*
@@ -38,6 +37,17 @@ div#header {
 div#status {
 	float:right;
 }
+div#static-links {
+	float:left;
+	background-color:#eeeeee;
+	padding:5px 8px;
+	margin-right:10px;
+}
+div#login-links {
+	float:right;
+	background-color:#eeeeee;
+	padding:5px 8px;
+}
 
 div.sidebar {
 	width:275px;
@@ -62,6 +72,7 @@ div#page {
 div#nav {
 	background-color:#ffffff;
 	border-bottom:1px dotted #2783a2;
+	padding-top:10px;
 }
 div#nav ul {
 	list-style:none;
@@ -72,8 +83,14 @@ div#nav ul {
 div#nav ul li {
 	display:inline;
 	float:left;
-	margin-right:5px;
+	margin-right:8px;
 	background-color:#daeaef;
+}
+div#nav ul li.green {
+	display:inline;
+	float:left;
+	margin-right:5px;
+	background-color:#359455;
 }
 div#nav ul li a {
 	color:#2783a2;
@@ -129,13 +146,13 @@ input.button {
 	padding:5px 15px;
 }
 input, textarea {
-	padding:3px;
-	background-color:#ffffff;
-	border:1px solid #dddddd;
+	padding:5px;
+	border:1px solid #cccccc;
+	font-size:0.9em;
 }
 input:focus, textarea:focus {
-	background-color:#CCFFB3;
-	border:1px solid #AAFF80;
+	border:1px solid #359455;
+	background-color:#def3e5;
 }
 label {
 	font-weight:bold;
@@ -146,6 +163,8 @@ label {
 
 /* Links */
 a {
+	color:#2783a2;
+	text-decoration:none;
 }
 div#header h1 a {
 	color:#42CB00;
@@ -165,7 +184,8 @@ div.sidebar a {
 	line-height:1.4em;
 }
 a:hover, div.sidebar a:hover  {
-	color:#226600;
+	color:#359455;
+	text-decoration:underline;
 }
 div.top-panel a {
 	border-bottom:1px solid #fff;
@@ -192,7 +212,6 @@ div#footer p a {
 */
 table {
 	width:100%;
-	font-size:0.85em;
 }
 table tr th {
 	color:#ffffff;
