@@ -12,23 +12,27 @@
 		
 		<div id="header">
 			<%= image_tag("obipost.png") %>
-			<div id="status">sanjay@post.harvard.edu - <a href="">Log out</a></div>
+			<div id="status">
+				<% if signed_in? %>
+					<%= current_user.email %> - 
+					<%= link_to "Signout", signout_path, :method => :delete %>
+				<% else %>
+					<%= link_to "Sign up", signup_path %> | 
+					<%= link_to "Sign in", signin_path %>
+				<% end %>
+			</div>
 		</div>
 		
 		<div id="nav">
 			<ul>
+				<% if signed_in? %>
+					<li><%= link_to "My Posts", current_user %>
+					<li><%= link_to "My Account", edit_user_path(current_user) %>
+				<% end %>
 				<li><%= link_to "Home", root_path %>
 				<li><%= link_to "FAQ", faq_path %>
 				<li><%= link_to "About", about_path %>
 				<li><%= link_to "Contact us", contact_path %>
-				<% if signed_in? %>
-				<li><%= link_to "My Posts", current_user %>
-				<li><%= link_to "Settings", edit_user_path(current_user) %>
-				<li><%= link_to "Signout", signout_path, :method => :delete %>
-				<% else %>
-				<li><%= link_to "Sign in", signin_path %>
-				<li><%= link_to "Sign up", signup_path %>
-				<% end %>
 			</ul>
 			<br class="clear" />
 		</div>
