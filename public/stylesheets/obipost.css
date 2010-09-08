@@ -13,7 +13,7 @@ h1 {
 	margin-bottom:10px;
 }
 .street-address {
-	font-size:1.5em;
+	font-size:1.3em;
 	font-weight:bold;
 }
 .city-zip {
@@ -21,11 +21,12 @@ h1 {
 }
 a.create-new {
 	color:#ffffff;
-	font-size:1.2em;
+	font-size:1.4em;
+	text-decoration:none;
 }
 a.create-new:hover {
 	color:#ffffff;
-	text-decoration:underline;
+	text-decoration:none;
 }
 
 /*
@@ -47,7 +48,7 @@ div#content {
 }
 div#header {
 	padding-left:0px;
-	padding-top:20px;
+	padding-top:15px;
 	margin:0px;
 }
 div#status {
@@ -57,7 +58,6 @@ div#static-links {
 	float:left;
 	background-color:#eeeeee;
 	padding:5px 8px;
-	margin-right:10px;
 }
 div#login-links {
 	float:right;
@@ -70,6 +70,10 @@ div#create-new {
 	background-color:#359455;
 	padding:9px;
 	float:right;
+	border:1px solid #359455;
+}
+div#create-new:hover {
+	border:1px solid #004919;
 }
 div.sidebar {
 	width:275px;
@@ -91,10 +95,11 @@ div#page {
 /* 
 	nav 
 */
+
 div#nav {
 	background-color:#ffffff;
 	border-bottom:1px dotted #2783a2;
-	padding-top:10px;
+	padding-top:15px;
 }
 div#nav ul {
 	list-style:none;
@@ -106,8 +111,16 @@ div#nav ul li {
 	display:inline;
 	float:left;
 	margin-right:8px;
+	margin-left:1px;
 	background-color:#daeaef;
+	border:1px solid #daeaef;
+	border-style:solid solid none solid;
 }
+div#nav ul li:hover {
+	border:1px solid #2783a2;
+	border-style:solid solid none solid;
+}
+
 div#nav ul li a {
 	color:#2783a2;
 	font-size:1.2em;
@@ -163,6 +176,7 @@ input.button {
 }
 input, textarea {
 	padding:5px;
+	margin-bottom:10px;
 	border:1px solid #cccccc;
 	font-size:0.9em;
 }
@@ -180,7 +194,6 @@ label {
 /* Links */
 a {
 	color:#2783a2;
-	text-decoration:none;
 }
 div#header h1 a {
 	color:#42CB00;

@@ -4,6 +4,7 @@
 	<%= csrf_meta_tag %>
 	<%= render 'layouts/stylesheets' %>
 	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
+							   "jquery.qtip-1.0.0-rc3.min.js",
 							   "rails",
 							   "application" %>
 </head>
@@ -19,21 +20,22 @@
 				<%= link_to "Home", root_path %>&nbsp;&nbsp;
 				<%= link_to "FAQ", faq_path %>&nbsp;&nbsp;
 				<%= link_to "About", about_path %>&nbsp;&nbsp;
-				<%= link_to "Contact us", contact_path %>
-				</div>
-				<div id="login-links">
+				<%= link_to "Contact us", contact_path %>&nbsp;&nbsp;
 				<% if signed_in? %>
 					<%= current_user.email %> - 
 					<%= link_to "Signout", signout_path, :method => :delete %>
 				<% else %>
-					<%= link_to "Sign in", signin_path %>&nbsp;&nbsp;
-					<b><%= link_to "Sign up", signup_path %></b>
+					<b><%= link_to "Sign in", signin_path %></b>
 				<% end %>
 				</div>
 			</div>
 		</div>
 		<div id="create-new">
-			<%= link_to "Create a new flyer", new_post_path, :class => "create-new" %>
+			<% if signed_in? %>
+				<%= link_to "Create a new flyer", new_post_path, :class => "create-new" %>
+			<% else %>
+				<%= link_to "Sign up", signup_path, :class => "create-new" %>
+			<% end %>
 		</div>
 		
 		
