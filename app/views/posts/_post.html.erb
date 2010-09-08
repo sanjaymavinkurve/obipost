@@ -1,41 +1,22 @@
 <% if post.completed < 0 %>
 <tr>
   <td>
-		<b><%= post.completed %></b> -
-		<%= post.id %> -
-		<%= post.user_id %> -
-    	<%= post.name %> -
-		<%= post.phone_number %> -
-		<%= post.street %> -
-		<%= post.city %> -
-		<%= post.state %> -
-		<%= post.zip %> -
-		<%= post.bedrooms %> -
-		<%= post.full_bathrooms %> -
-		<%= post.half_bathrooms %> -
-		<%= link_to post.step_names[0], edit_post_path(post.id, :current_step => "0") %>
-		<%= link_to post.step_names[1], edit_post_path(post.id, :current_step => "1") %>
-		<%= link_to post.step_names[2], edit_post_path(post.id, :current_step => "2") %>
-		<%= link_to post.step_names[3], edit_post_path(post.id, :current_step => "3") %> -
-		<%= link_to "View", :controller => "posts", :action => "show", :id => post %>
-		<%= link_to "Delete", post, :method => :delete, :remote => true %>
+		<span class="street-address"><%= post.street %></span>&nbsp;
+		<span class="city-zip"><%= post.city %>, <%= post.state %> <%= post.zip %></span>
+		<br />
+		<%= link_to post.step_names[0], edit_post_path(post.id, :current_step => "0") %> -
+		<%= link_to post.step_names[1], edit_post_path(post.id, :current_step => "1") %> -
+		<%= link_to post.step_names[2], edit_post_path(post.id, :current_step => "2") %> -
+		<%= link_to post.step_names[3], edit_post_path(post.id, :current_step => "3") %>
+
 	</td>
 </tr>
 <% else %>
 <tr>
 	<td>
-		<b><%= post.completed %></b> -
-		<%= post.id %> -
-		<%= post.user_id %> -
-    	<%= post.name %> -
-		<%= post.phone_number %> -
-		<%= post.street %> -
-		<%= post.city %> -
-		<%= post.state %> -
-		<%= post.zip %> -
-		<%= post.bedrooms %> -
-		<%= post.full_bathrooms %> -
-		<%= post.half_bathrooms %> -
+		<span class="street-address"><%= post.street %></span>&nbsp;
+		<span class="city-zip"><%= post.city %>, <%= post.state %> <%= post.zip %></span>
+		<br />
 		<%= link_to "Complete", edit_post_path(post.id, :current_step => post.completed) %>
 		<%= link_to "Delete", post, :method => :delete, :remote => true %>
 	</td>

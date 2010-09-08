@@ -1,11 +1,10 @@
-<%= link_to "Create a new post", new_post_path %>
-
 <div id="completed_posts">
 	<table>
 		<%= render @user.completed_posts %>
 	</table>
 </div>
 
+<br /><br />
 
 <% if @user.incomplete_posts.count > 0 %>
 

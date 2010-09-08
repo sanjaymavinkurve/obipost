@@ -3,7 +3,9 @@
 	<title><%= title %></title>
 	<%= csrf_meta_tag %>
 	<%= render 'layouts/stylesheets' %>
-	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "rails", "application" %>	
+	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
+							   "rails",
+							   "application" %>
 </head>
 
 <body>
@@ -11,7 +13,7 @@
 	<div id="container">
 		
 		<div id="header">
-			<%= image_tag("obipost.png") %>
+			<%= image_tag("obipost.png") %>			
 			<div id="status">
 				<div id="static-links">
 				<%= link_to "Home", root_path %>&nbsp;&nbsp;
@@ -30,6 +32,10 @@
 				</div>
 			</div>
 		</div>
+		<div id="create-new">
+			<%= link_to "Create a new flyer", new_post_path, :class => "create-new" %>
+		</div>
+		
 		
 		<div id="nav">
 			<ul>
