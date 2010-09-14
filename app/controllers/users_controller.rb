@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 	
 	def show
 		@user = User.find(params[:id])
-		@title = "My Posts"
+		# @title = "My Flyers"
 	end
 	
 	def create
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 	end
 	
 	def edit
-		@title = "Edit user"
+		# @title = "Edit user"
 	end
 	
 	def destroy

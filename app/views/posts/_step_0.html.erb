@@ -1,13 +1,26 @@
 <%= f.hidden_field :step, :value => '0' %>
 
-<div class="field">
-	<%= f.label :name %><br />
-	<% if @post.new_record? %>
-		<%= f.text_field :name, :value => current_user.name, :title => "Field help text goes here" %>
-	<% else %>
-		<%= f.text_field :name, :title => "Field help text goes here" %>
-	<% end %></div>
-<div class="field">
-	<%= f.label :phone_number %><br />
-	<%= f.text_field :phone_number %>
-</div>
+
+<table>
+	<td><%= f.label :name %><br /></td>
+	<td width=80%>
+		<% if @post.new_record? %>
+			<%= f.text_field :name, :value => current_user.name, :title => "Field help text goes here" %>
+		<% else %>
+			<%= f.text_field :name, :title => "Field help text goes here" %>
+		<% end %>
+	</td>
+	</tr>
+	<tr>
+	<td><%= f.label :phone_number %></td>
+	<td><%= f.text_field :phone_number %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :email %></td>
+	<td><%= f.text_field :phone_number %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :company_name %></td>
+	<td><%= f.text_field :phone_number %></td>
+	</tr>
+</table>

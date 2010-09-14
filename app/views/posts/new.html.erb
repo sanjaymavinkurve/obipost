@@ -1,5 +1,3 @@
-<%= render "steps_progress", :post => @post%>
-
 <%= form_for @post, :html => {:multipart => true} do |f| %>
 	<%= render "shared/error_messages", :object => f.object %>
 	<%= render "step_#{@post.current_step}", :f => f, :post => @post %>

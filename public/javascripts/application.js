@@ -17,28 +17,25 @@ $(function() {
 			},
 			effect: {
 				type: 'fade',
-				length: 100
+				length: 250
 			}
 		},
 		position: {
 			corner: {
 				target: 'rightMiddle',
 				tooltip: 'leftMiddle'
+			},
+			adjust: {
+				x: 4,
+				y: 0
 			}
 		},
 		style: {
-			padding: 5,
-			background: '#dddddd',
+			padding: 4,
+			color: '#359455',
 			border: {
-				width: 0
-			},
-			tip: {
-				corner: 'leftMiddle',
-				color: '#dddddd',
-				size: {
-					x: 10,
-					y: 12
-				}
+				width: 0,
+				color: '#aaaaaa'
 			}
 		}
 	});

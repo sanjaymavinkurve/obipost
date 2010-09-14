@@ -1,14 +1,77 @@
 <%= f.hidden_field :step, :value => '2' %>
 
-<div class="field">
-	<%= f.label :bedrooms %><br />
-	<%= f.text_field :bedrooms %>
-</div>
-<div class="field">
-	<%= f.label :full_bathrooms %><br />
-	<%= f.text_field :full_bathrooms %>
-</div>
-<div class="field">
-	<%= f.label :half_bathrooms %><br />
-	<%= f.text_field :half_bathrooms %>
-</div>
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :central_ac, "Central A/C" %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :central_heat %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :fireplace %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :high_ceilings %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :skylights %></div>
+			</td>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :attic %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :basement %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :walkin_closets %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :walkin_pantry %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :hardwood_floors %></div>
+			</td>
+		</tr>
+		<tr><td colspan=2><hr /></td></tr>
+		<tr>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :family_room %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :living_room %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :bonus_room %></div>
+			</td>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :office %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :dining_room %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :breakfast_nook %></div>
+			</td>
+		</tr>
+		<tr><td colspan=2><hr /></td></tr>
+		<tr>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :dishwasher %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :refrigerator %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :stove %></div>
+			</td>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :microwave %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :ss_appliances, "Stainless steel appliances" %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :granite_countertops %></div>
+			</td>
+		</tr>
+		<tr><td colspan=2><hr /></td></tr>
+		<tr>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :washing_machine %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :dryer %></div>
+			</td>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :laundry_inside %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :laundry_outside %></div>
+			</td>
+		</tr>
+		<tr><td colspan=2><hr /></td></tr>
+		<tr>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :balcony %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :deck %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :patio %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :yard %></div>
+			</td>
+			<td>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :swimming_pool %></div>			
+				<div><%= f.check_box :half_bathrooms %><%= f.label :sauna %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :jetted_tub %></div>
+				<div><%= f.check_box :half_bathrooms %><%= f.label :sprinklers %></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<br />
+

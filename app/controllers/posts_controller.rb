@@ -7,10 +7,10 @@ class PostsController < ApplicationController
 		3.times {@post.photoframes.build}
 		@post.completed = submitted_step.to_i + 1
 		@post.save
-		@post.current_step = submitted_step.to_i + 1
 		if params[:commit] == "Save" || params[:commit] == "I'll finish later"
 	    redirect_to current_user
 	  elsif params[:commit] == "Next"
+  		@post.current_step = submitted_step.to_i + 1
   		@title = @post.step_names[@post.current_step.to_i]
 		  render 'new'
 	  end
@@ -25,11 +25,11 @@ class PostsController < ApplicationController
 		  @post.update_attributes(:completed => -1)
 			redirect_to current_user
 		else
-			@post.current_step = submitted_step.to_i + 1
-			@title = @post.step_names[@post.current_step.to_i]
 			if params[:commit] == "Save" || params[:commit] == "I'll finish later"
   	    redirect_to current_user
   	  elsif params[:commit] == "Next"
+  			@post.current_step = submitted_step.to_i + 1
+  			@title = @post.step_names[@post.current_step.to_i]
   	    @post.update_attributes(:completed => submitted_step.to_i + 1)
   		  render 'new'
   	  end

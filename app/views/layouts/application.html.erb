@@ -14,7 +14,7 @@
 	<div id="container">
 		
 		<div id="header">
-			<%= image_tag("obipost.png") %>			
+			<%= image_tag("obipost.png") %>
 			<div id="status">
 				<div id="static-links">
 				<%= link_to "Home", root_path %>&nbsp;&nbsp;
@@ -30,24 +30,32 @@
 				</div>
 			</div>
 		</div>
-		<div id="create-new">
-			<% if signed_in? %>
-				<%= link_to "Create a new flyer", new_post_path, :class => "create-new" %>
-			<% else %>
-				<%= link_to "Sign up", signup_path, :class => "create-new" %>
-			<% end %>
-		</div>
-		
-		
-		<div id="nav">
-			<ul>
+		<% if params[:controller] == "posts" %>
+		<% else %>
+			<div id="create-new">
 				<% if signed_in? %>
-					<li><%= link_to "My Posts", current_user %>
-					<li><%= link_to "My Account", edit_user_path(current_user) %>
+					<%= button_to "Create a new flyer", new_post_path, :class => "create-new", :method => :get %>
+				<% else %>
+					<%= button_to "Sign up", signup_path, :class => "create-new", :method => :get %>
 				<% end %>
-			</ul>
-			<br class="clear" />
-		</div>
+			</div>
+		<% end %>
+		
+		
+		<% if params[:controller] == "posts" %>
+			<div id="steps"><%= render "steps_progress", :post => @post %></div>
+		<% else %>
+			<div id="nav">
+				<ul>
+					<% if signed_in? %>
+						<li><%= link_to "My Flyers", current_user %>
+						<li><%= link_to "My Account", edit_user_path(current_user) %>
+					<% end %>
+				</ul>
+				<br class="clear" />
+			</div>
+		<% end %>
+		
 		<div id="content">
 			<div id="page">
 				<% flash.each do |key, value| %>
@@ -57,7 +65,7 @@
 				<%= yield %>
 			</div>
 			<div class="sidebar">
-				Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Fusce ultr icies tortor non neque por ttitor 
+				<%= yield :sidebar %>
 			</div>
 			<div class="clear"></div>
 		</div>

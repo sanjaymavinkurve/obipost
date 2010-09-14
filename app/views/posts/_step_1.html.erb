@@ -1,18 +1,76 @@
 <%= f.hidden_field :step, :value => '1' %>
 
-<div class="field">
-	<%= f.label :street %><br />
-	<%= f.text_field :street, :title => "test" %>
-</div>
-<div class="field">
-	<%= f.label :city %><br />
-	<%= f.text_field :city, :title => "test" %>
-</div>
-<div class="field">
-	<%= f.label :state %><br />
-	<%= f.text_field :state, :title => "test" %>
-</div>
-<div class="field">
-	<%= f.label :zip %><br />
-	<%= f.text_field :zip, :title => "test" %>
-</div>
+
+<table>
+	<tr>
+	<td>Property&nbsp;address</td>
+	<td>
+		<table>
+			<tr>
+			<td>
+				<%= f.label :street, :class => "small gray" %><br />
+				<%= f.text_field :street,  :size => 20 %>
+			</td>
+			<td>
+				<%= f.label :city, :class => "small gray" %><br />
+				<%= f.text_field :city, :size => 10 %>
+			</td>
+			<td>
+				<%= f.label :state, :class => "small gray" %><br />
+				<%= f.text_field :state, :size => 5 %>
+			</td>
+			<td width=80%>
+				<%= f.label :zip, :class => "small gray" %><br />
+				<%= f.text_field :zip, :size => 5 %>
+			</td>
+			</tr>
+		</table>
+	</td>
+	</tr>
+	<tr>
+	<td><%= f.label :property_type %></td>
+	<td width=80%><%= f.select :bedrooms, ["Real estate for sale", "Real estate for rent", "Vacation rental"] %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :year_built %></td>
+	<td><%= f.text_field :state, :size => 5 %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :mls_number, "MLS number" %></td>
+	<td><%= f.text_field :state, :size => 15 %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :asking_price %></td>
+	<td><%= f.text_field :state, :size => 5 %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :hoa, "HOA fees" %></td>
+	<td><%= f.text_field :state, :size => 5 %></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+	<td><%= f.label :bedrooms %> <%= f.select :bedrooms, 1..6 %></td>
+	<td><%= f.label :full_bathrooms %> <%= f.select :full_bathrooms, 1..6 %></td>
+	<td><%= f.label :half_bathrooms %> <%= f.select :full_bathrooms, 1..6 %></td>
+	<td><%= f.label :floors %> <%= f.select :full_bathrooms, 1..6 %></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+	<td><%= f.label :square_footage %></td>
+	<td width=80%><%= f.text_field :state, :size => 5 %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :lot_size %></td>
+	<td><%= f.text_field :state, :size => 5 %>
+	</tr>
+	<tr>
+	<td><%= f.label :covered_parking %></td>
+	<td><%= f.select :full_bathrooms, 1..6 %></td>
+	</tr>
+</table>
+
+<br />
