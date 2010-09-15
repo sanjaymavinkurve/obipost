@@ -1,76 +1,176 @@
 <%= f.hidden_field :step, :value => '2' %>
 
 <table>
-	<tbody>
-		<tr>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :central_ac, "Central A/C" %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :central_heat %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :fireplace %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :high_ceilings %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :skylights %></div>
-			</td>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :attic %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :basement %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :walkin_closets %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :walkin_pantry %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :hardwood_floors %></div>
-			</td>
-		</tr>
-		<tr><td colspan=2><hr /></td></tr>
-		<tr>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :family_room %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :living_room %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :bonus_room %></div>
-			</td>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :office %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :dining_room %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :breakfast_nook %></div>
-			</td>
-		</tr>
-		<tr><td colspan=2><hr /></td></tr>
-		<tr>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :dishwasher %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :refrigerator %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :stove %></div>
-			</td>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :microwave %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :ss_appliances, "Stainless steel appliances" %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :granite_countertops %></div>
-			</td>
-		</tr>
-		<tr><td colspan=2><hr /></td></tr>
-		<tr>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :washing_machine %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :dryer %></div>
-			</td>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :laundry_inside %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :laundry_outside %></div>
-			</td>
-		</tr>
-		<tr><td colspan=2><hr /></td></tr>
-		<tr>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :balcony %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :deck %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :patio %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :yard %></div>
-			</td>
-			<td>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :swimming_pool %></div>			
-				<div><%= f.check_box :half_bathrooms %><%= f.label :sauna %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :jetted_tub %></div>
-				<div><%= f.check_box :half_bathrooms %><%= f.label :sprinklers %></div>
-			</td>
-		</tr>
-	</tbody>
+	
+	<tr>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Indoor features</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :attic %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :cable_ready %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :ceiling_fans %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :double_pane_windows %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :fireplace %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :intercom_system %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :jetted_tub %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :mil_apartment %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :security_system %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :skylights %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :vaulted_ceiling %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :wet_bar %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :wired %><br />
+		</td>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Outdoor features</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :balcony_patio %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :barbecue_area %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :deck %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :dock %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :fenced_yard %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :garden %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :greenhouse %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :hot_tub %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :lawn %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :pond %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :pool %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :porch %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :rv_parking %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :sauna %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :sprinkler_system %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :waterfront %><br />		</td>
+	</tr>
+	
+	<tr><td colspan=4><hr /></td></tr>
+	
+	<tr>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Heating source</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :coal %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :electric %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :gas %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :oil %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :propane %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :solar %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :wood %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :other %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :none %><br />
+		</td>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Exterior</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :brick %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :cement %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :composition %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :metal %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :shingle %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :stone %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :stucco %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :vinyl %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :wood %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :other %><br />
+		</td>
+	</tr>
+	
+	<tr><td colspan=4><hr /></td></tr>
+	
+	<tr>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Parking</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :carport %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :attached_garage %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :detached_garage %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :off_street %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :on_street %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :none %><br />
+		</td>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">View</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :city %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :mountain %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :park %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :territorial %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :water %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :none %><br />
+		</td>
+	</tr>
+	
+	<tr><td colspan=4><hr /></td></tr>
+	
+	<tr>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Heating type</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :basebord %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :forced_air %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :heat_pump %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :radiant %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :stove %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :wall %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :other %><br />
+		</td>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Cooling type</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :central %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :evaporative %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :geothermal %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :refrigerator %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :solar %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :wall %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :other %><br />
+		</td>
+	</tr>
+	
+	<tr><td colspan=4><hr /></td></tr>
+	
+	<tr>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Appliances</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :dishwasher %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :dryer %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :freezer %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :garbage_disposal %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :microwave %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :range %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :refrigerator %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :trash_compactor %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :washing_machine %><br />
+		</td>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Floors</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :carpet %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :concrete %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :hardwood %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :laminate %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :linoleum %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :slate %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :softwood %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :tile %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :other %><br />
+		</td>
+	</tr>
+	
+	<tr><td colspan=4><hr /></td></tr>
+	
+	<tr>
+		<td style="vertical-align:top; width:125px; text-align:right; font-weight:bold">Rooms</td>
+		<td style="vertical-align:top; width:175px">
+			<%= f.check_box :half_bathrooms %><%= f.label :breakfast_nook %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :dining_room %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :family_room %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :laundry_room %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :library %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :master_bath %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :mud_room %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :office %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :pantry %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :recreation_room %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :workshop %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :solarium %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :sun_room %><br />
+			<%= f.check_box :half_bathrooms %><%= f.label :walkin_closet %><br />
+		</td>
+		<td style="vertical-align:top; width:125px; text-align:right"></td>
+		<td style="vertical-align:top; width:175px">
+		</td>
+	</tr>
+
 </table>
 
 <br />

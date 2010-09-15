@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 	end
 	
 	def step_names
-	  ["Contact information", "Property basics", "Property features", "Photos"]
+	  ["Contact info", "Property basics", "Features", "Photos"]
   end
 	
 	def current_step

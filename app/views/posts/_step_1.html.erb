@@ -28,11 +28,19 @@
 	</td>
 	</tr>
 	<tr>
-	<td><%= f.label :property_type %></td>
+	<td><%= f.label :listing_type %></td>
 	<td width=80%><%= f.select :bedrooms, ["Real estate for sale", "Real estate for rent", "Vacation rental"] %></td>
 	</tr>
 	<tr>
+	<td><%= f.label :property_type %></td>
+	<td><%= f.select :bedrooms, ["Single-family home", "Condo", "Townhouse", "Multi-family", "Other"] %></td>
+	</tr>
+	<tr>
 	<td><%= f.label :year_built %></td>
+	<td><%= f.text_field :state, :size => 5 %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :year_updated %></td>
 	<td><%= f.text_field :state, :size => 5 %></td>
 	</tr>
 	<tr>
@@ -53,7 +61,7 @@
 	<tr>
 	<td><%= f.label :bedrooms %> <%= f.select :bedrooms, 1..6 %></td>
 	<td><%= f.label :full_bathrooms %> <%= f.select :full_bathrooms, 1..6 %></td>
-	<td><%= f.label :half_bathrooms %> <%= f.select :full_bathrooms, 1..6 %></td>
+	<td><%= f.label :half_bathrooms %> <%= f.select :half_bathrooms, 1..6 %></td>
 	<td><%= f.label :floors %> <%= f.select :full_bathrooms, 1..6 %></td>
 	</tr>
 </table>
@@ -70,6 +78,18 @@
 	<tr>
 	<td><%= f.label :covered_parking %></td>
 	<td><%= f.select :full_bathrooms, 1..6 %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :roof %></td>
+	<td><%= f.select :bedrooms, ["", "Asphalt", "Built-up", "Composition", "Metal", "Shake / Shingle", "Slate", "Tile", "Other"] %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :basement %></td>
+	<td><%= f.select :full_bathrooms, ["", "Finished", "Partially finished", "Unfinished", "None"] %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :style %></td>
+	<td><%= f.select :full_bathrooms, ["", "Bungalow", "Cape Cod", "Colonial", "Contemporary", "Craftsman", "French", "Georgian", "Loft", "Modern", "Queen Anne / Victorian", "Ranch / Rambler", "Santa Fe / Pueblo Style", "Spanish", "Split-level", "Tudor", "Other"] %></td>
 	</tr>
 </table>
 

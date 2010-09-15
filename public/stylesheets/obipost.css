@@ -239,14 +239,14 @@ div#footer p a {
 	font-size:1.0em;
 }
 
-
-
 table {
 	width:100%;
 }
-
 table td {
 	padding:5px 5px 5px 0px;
+}
+table#amenities div {
+	padding:2px 0px 0px 0px;
 }
 
 
