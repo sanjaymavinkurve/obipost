@@ -27,6 +27,8 @@ input.create-new {
 	text-decoration:none;
 	background-color:#359455;
 	border:1px dotted #359455;
+	-moz-border-radius:5px;
+	border-radius:5px;
 }
 input.create-new:hover {
 	color:#ffffff;
@@ -63,8 +65,12 @@ div#status {
 }
 div#static-links {
 	float:left;
-	background-color:#eeeeee;
+	background-color:#daeaef;
 	padding:5px 8px;
+	position:relative;
+	top:-15px;
+	-moz-border-radius:0px 0px 5px 5px;
+	border-radius:0px 0px 5px 5px;
 }
 div#login-links {
 	float:right;
@@ -75,8 +81,6 @@ div#create-new {
 	position:relative;
 	top:-15px;
 	float:right;
-}
-div#create-new:hover {
 }
 div.sidebar {
 	width:275px;
@@ -119,6 +123,8 @@ div#nav ul li {
 	margin-left:1px;
 	background-color:#daeaef;
 	border:1px solid #daeaef;
+	-moz-border-radius:5px;
+	border-radius:5px;
 }
 div#nav ul li:hover {
 	border:1px solid #2783a2;
