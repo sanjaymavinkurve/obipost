@@ -10,7 +10,8 @@
 		<%= link_to post.step_names[0], edit_post_path(post.id, :current_step => "0") %>&nbsp;
 		<%= link_to post.step_names[1], edit_post_path(post.id, :current_step => "1") %>&nbsp;
 		<%= link_to post.step_names[2], edit_post_path(post.id, :current_step => "2") %>&nbsp;
-		<%= link_to post.step_names[3], edit_post_path(post.id, :current_step => "3") %>
+		<%= link_to post.step_names[3], edit_post_path(post.id, :current_step => "3") %>&nbsp;
+		<%= link_to post.step_names[4], edit_post_path(post.id, :current_step => "4") %>
 	</td>
 </tr>
 <% else %>

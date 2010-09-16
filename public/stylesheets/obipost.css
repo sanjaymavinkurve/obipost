@@ -99,7 +99,6 @@ div#attributes-column {
 }
 div#nav {
 	background-color:#ffffff;
-	border-bottom:1px dotted #aaaaaa;
 	padding-top:10px;
 }
 div#steps {
@@ -120,11 +119,9 @@ div#nav ul li {
 	margin-left:1px;
 	background-color:#daeaef;
 	border:1px solid #daeaef;
-	border-style:solid solid none solid;
 }
 div#nav ul li:hover {
 	border:1px solid #2783a2;
-	border-style:solid solid none solid;
 }
 
 div#nav ul li a {

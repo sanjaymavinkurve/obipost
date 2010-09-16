@@ -1,15 +1,15 @@
 <% @post.step_names.each_with_index do |step, i| %>
 	<% if @post.current_step.to_i == i %>
 		<span class="current-step">
-			<%= i + 1 %>.
+
 			<%= "#{step}" %></span>
 	<% else %>
 		<span class="other-step">
-			<%= i + 1 %>.
+
 			<%= "#{step}" %>
 		</span>
 	<% end %>
 	<% if i != @post.step_names.count - 1 %>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= image_tag("arrow.png") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;<%= image_tag("arrow.png") %>&nbsp;&nbsp;&nbsp;
 	<% end %>	
 <% end %>

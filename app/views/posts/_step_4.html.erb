@@ -1,0 +1,13 @@
+<%= f.hidden_field :step, :value => '3' %>
+
+<div>
+	<%= f.fields_for :photoframes do |photoframe| %>
+		<%= photoframe.file_field :photo %>
+	<% end %>
+</div>
+
+<div>
+	<%= f.fields_for :photoframes do |photoframe| %>
+		<%= image_tag(photoframe.object.photo.url(:original)) %>
+	<% end %>
+</div>
