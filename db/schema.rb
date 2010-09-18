@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906193821) do
+ActiveRecord::Schema.define(:version => 20100910072159) do
 
   create_table "photoframes", :force => true do |t|
     t.string   "caption"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20100906193821) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.string   "street"
     t.string   "city"
     t.string   "state"
@@ -38,6 +38,39 @@ ActiveRecord::Schema.define(:version => 20100906193821) do
     t.integer  "user_id"
     t.integer  "completed"
     t.boolean  "disabled"
+    t.string   "email"
+    t.string   "company"
+    t.string   "listing_type"
+    t.string   "property_type"
+    t.integer  "year_built"
+    t.integer  "year_updated"
+    t.string   "mls"
+    t.integer  "price"
+    t.integer  "hoa_fees"
+    t.integer  "floors"
+    t.integer  "square_footage"
+    t.integer  "lot_size"
+    t.integer  "covered_parking"
+    t.string   "roof"
+    t.string   "basement"
+    t.string   "style"
+    t.integer  "indoor_features"
+    t.integer  "outdoor_features"
+    t.integer  "heating_source"
+    t.integer  "exterior"
+    t.integer  "parking"
+    t.integer  "view"
+    t.integer  "heating_type"
+    t.integer  "cooling_type"
+    t.integer  "appliances"
+    t.integer  "floors_type"
+    t.integer  "rooms"
+    t.string   "school_district"
+    t.string   "elementary"
+    t.string   "middle"
+    t.string   "high"
+    t.string   "neighborhood"
+    t.text     "neighborhood_description"
   end
 
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"

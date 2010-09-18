@@ -1,6 +1,5 @@
 <%= f.hidden_field :step, :value => '1' %>
 
-
 <table>
 	<tr>
 	<td>Property&nbsp;address</td>
@@ -29,31 +28,31 @@
 	</tr>
 	<tr>
 	<td><%= f.label :listing_type %></td>
-	<td width=80%><%= f.select :bedrooms, ["Real estate for sale", "Real estate for rent", "Vacation rental"] %></td>
+	<td width=80%><%= f.select :listing_type, ["Real estate for sale", "Real estate for rent", "Vacation rental"] %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :property_type %></td>
-	<td><%= f.select :bedrooms, ["Single-family home", "Condo", "Townhouse", "Multi-family", "Other"] %></td>
+	<td><%= f.select :property_type, ["Single-family home", "Condo", "Townhouse", "Multi-family", "Other"] %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :year_built %></td>
-	<td><%= f.text_field :state, :size => 5 %></td>
+	<td><%= f.text_field :year_built, :size => 5 %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :year_updated %></td>
-	<td><%= f.text_field :state, :size => 5 %></td>
+	<td><%= f.text_field :year_updated, :size => 5 %></td>
 	</tr>
 	<tr>
-	<td><%= f.label :mls_number, "MLS number" %></td>
-	<td><%= f.text_field :state, :size => 15 %></td>
+	<td><%= f.label :mls, "MLS number" %></td>
+	<td><%= f.text_field :mls, :size => 15 %></td>
 	</tr>
 	<tr>
-	<td><%= f.label :asking_price %></td>
-	<td><%= f.text_field :state, :size => 5 %></td>
+	<td><%= f.label :price %></td>
+	<td>$<%= f.text_field :price, :size => 5 %></td>
 	</tr>
 	<tr>
-	<td><%= f.label :hoa, "HOA fees" %></td>
-	<td><%= f.text_field :state, :size => 5 %></td>
+	<td><%= f.label :hoa_fees, "HOA fees" %></td>
+	<td><%= f.text_field :hoa_fees, :size => 5 %></td>
 	</tr>
 </table>
 
@@ -69,27 +68,27 @@
 <table>
 	<tr>
 	<td><%= f.label :square_footage %></td>
-	<td width=80%><%= f.text_field :state, :size => 5 %></td>
+	<td width=80%><%= f.text_field :square_footage, :size => 5 %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :lot_size %></td>
-	<td><%= f.text_field :state, :size => 5 %>
+	<td><%= f.text_field :lot_size, :size => 5 %>
 	</tr>
 	<tr>
 	<td><%= f.label :covered_parking %></td>
-	<td><%= f.select :full_bathrooms, 1..6 %></td>
+	<td><%= f.select :covered_parking, 1..6 %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :roof %></td>
-	<td><%= f.select :bedrooms, ["", "Asphalt", "Built-up", "Composition", "Metal", "Shake / Shingle", "Slate", "Tile", "Other"] %></td>
+	<td><%= f.select :roof, ["", "Asphalt", "Built-up", "Composition", "Metal", "Shake / Shingle", "Slate", "Tile", "Other"] %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :basement %></td>
-	<td><%= f.select :full_bathrooms, ["", "Finished", "Partially finished", "Unfinished", "None"] %></td>
+	<td><%= f.select :basement, ["", "Finished", "Partially finished", "Unfinished", "None"] %></td>
 	</tr>
 	<tr>
 	<td><%= f.label :style %></td>
-	<td><%= f.select :full_bathrooms, ["", "Bungalow", "Cape Cod", "Colonial", "Contemporary", "Craftsman", "French", "Georgian", "Loft", "Modern", "Queen Anne / Victorian", "Ranch / Rambler", "Santa Fe / Pueblo Style", "Spanish", "Split-level", "Tudor", "Other"] %></td>
+	<td><%= f.select :style, ["", "Bungalow", "Cape Cod", "Colonial", "Contemporary", "Craftsman", "French", "Georgian", "Loft", "Modern", "Queen Anne / Victorian", "Ranch / Rambler", "Santa Fe / Pueblo Style", "Spanish", "Split-level", "Tudor", "Other"] %></td>
 	</tr>
 </table>
 
