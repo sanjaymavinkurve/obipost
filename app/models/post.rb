@@ -134,7 +134,7 @@ class Post < ActiveRecord::Base
              :column => 'rooms'
 
 	def steps
-		%w[0 1 2 3]
+		%w[0 1 2 3 4]
 	end
 	
 	def step_names
