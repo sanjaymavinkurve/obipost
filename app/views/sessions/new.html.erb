@@ -1,15 +1,16 @@
 <%= form_for(:session, :url => sessions_path) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Sign in" %>
-  </div>
+<table>
+	<td><%= f.label :email %></td>
+	<td width=80%><%= f.text_field :email %></td>
+	</tr>
+	<tr>
+	<td><%= f.label :password %></td>
+	<td><%= f.password_field :password %></td>
+	</tr>
+</table>
+<%= f.submit "Sign in" %>
 <% end %>
 
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+
+
